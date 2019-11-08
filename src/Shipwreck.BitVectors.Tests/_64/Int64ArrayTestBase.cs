@@ -7,7 +7,7 @@ namespace Shipwreck.BitVectors
 {
     public abstract class Int64ArrayTestBase
     {
-        internal abstract IInt64Array GetArray(ulong[] data);
+        internal abstract IBitVector<ulong> GetArray(ulong[] data);
 
         internal virtual void Release()
         {

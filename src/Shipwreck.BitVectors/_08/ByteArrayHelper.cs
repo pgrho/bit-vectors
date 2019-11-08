@@ -22,7 +22,7 @@ namespace Shipwreck.BitVectors
         }
 
         public static bool GetBitCore<T>(this T array, int index)
-            where T : IByteArray
+            where T : IBitVector<byte>
         {
             if (index < 0)
             {
@@ -40,7 +40,7 @@ namespace Shipwreck.BitVectors
         }
 
         public static byte GetByteCore<T>(this T array, int startIndex, int length)
-            where T : IByteArray
+            where T : IBitVector<byte>
         {
             if (startIndex < 0)
             {
@@ -66,7 +66,7 @@ namespace Shipwreck.BitVectors
 
         // TODO: optimize bit operations
         public static short GetInt16Core<T>(this T array, int startIndex, int length)
-            where T : IByteArray
+            where T : IBitVector<byte>
         {
             if (startIndex < 0)
             {
@@ -88,7 +88,7 @@ namespace Shipwreck.BitVectors
 
         // TODO: optimize bit operations
         public static int GetInt32Core<T>(this T array, int startIndex, int length)
-            where T : IByteArray
+            where T : IBitVector<byte>
         {
             if (startIndex < 0)
             {
@@ -110,7 +110,7 @@ namespace Shipwreck.BitVectors
 
         // TODO: optimize bit operations
         public static long GetInt64Core<T>(this T array, int startIndex, int length)
-            where T : IByteArray
+            where T : IBitVector<byte>
         {
             if (startIndex < 0)
             {

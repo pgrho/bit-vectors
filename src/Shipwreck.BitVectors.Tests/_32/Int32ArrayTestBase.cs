@@ -7,7 +7,7 @@ namespace Shipwreck.BitVectors
 {
     public abstract class Int32ArrayTestBase
     {
-        internal abstract IInt32Array GetArray(uint[] data);
+        internal abstract IBitVector<uint> GetArray(uint[] data);
 
         internal virtual void Release()
         {

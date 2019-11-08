@@ -11,4 +11,10 @@
         int GetInt32(int startIndex, int length);
         long GetInt64(int startIndex, int length);
     }
+
+    internal interface IBitVector<T> : IBitVector
+        where T : struct
+    {
+        T GetElement(int index);
+    }
 }

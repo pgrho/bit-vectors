@@ -2,7 +2,7 @@
 
 namespace Shipwreck.BitVectors
 {
-    public unsafe struct UInt16Array : IInt16Array
+    public unsafe struct UInt16Array : IBitVector<ushort>
     {
         private ushort[] _Array;
 
@@ -17,7 +17,7 @@ namespace Shipwreck.BitVectors
 
         public int Length => _Array.Length;
 
-        ushort IInt16Array.GetElement(int index)
+        ushort IBitVector<ushort>.GetElement(int index)
             => _Array[index];
 
         #region Common

@@ -6,7 +6,7 @@ namespace Shipwreck.BitVectors
     {
         private GCHandle _GCHandle;
 
-        internal override unsafe IByteArray GetArray(byte[] data)
+        internal override unsafe IBitVector<byte> GetArray(byte[] data)
         {
             if (_GCHandle != default)
             {

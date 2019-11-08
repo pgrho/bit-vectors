@@ -2,7 +2,7 @@
 {
     public class ByteArrayTest : ByteArrayTestBase
     {
-        internal override IByteArray GetArray(byte[] data)
+        internal override IBitVector<byte> GetArray(byte[] data)
             => new ByteArray(data);
     }
 }

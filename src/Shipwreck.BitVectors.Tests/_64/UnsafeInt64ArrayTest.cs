@@ -6,7 +6,7 @@ namespace Shipwreck.BitVectors
     {
         private GCHandle _GCHandle;
 
-        internal override unsafe IInt64Array GetArray(ulong[] data)
+        internal override unsafe IBitVector<ulong> GetArray(ulong[] data)
         {
             if (_GCHandle != default)
             {

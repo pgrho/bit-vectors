@@ -2,7 +2,7 @@
 
 namespace Shipwreck.BitVectors
 {
-    public unsafe struct UnsafeInt32Array : IInt32Array
+    public unsafe struct UnsafeInt32Array : IBitVector<uint>
     {
         private uint* _Pointer;
 
@@ -18,7 +18,7 @@ namespace Shipwreck.BitVectors
 
         public int Length { get; }
 
-        uint IInt32Array.GetElement(int index)
+        uint IBitVector<uint>.GetElement(int index)
             => _Pointer[index];
 
         #region Common

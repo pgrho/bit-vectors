@@ -2,7 +2,7 @@
 
 namespace Shipwreck.BitVectors
 {
-    public unsafe struct UInt64Array : IInt64Array
+    public unsafe struct UInt64Array : IBitVector<ulong>
     {
         private ulong[] _Array;
 
@@ -17,7 +17,7 @@ namespace Shipwreck.BitVectors
 
         public int Length => _Array.Length;
 
-        ulong IInt64Array.GetElement(int index)
+        ulong IBitVector<ulong>.GetElement(int index)
             => _Array[index];
 
         #region Common

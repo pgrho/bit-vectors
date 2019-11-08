@@ -2,7 +2,7 @@
 
 namespace Shipwreck.BitVectors
 {
-    public unsafe struct SByteArray : IByteArray
+    public unsafe struct SByteArray : IBitVector<byte>
     {
         private sbyte[] _Array;
 
@@ -17,7 +17,7 @@ namespace Shipwreck.BitVectors
 
         public int Length => _Array.Length;
 
-        byte IByteArray.GetElement(int index)
+        byte IBitVector<byte>.GetElement(int index)
             => unchecked((byte)_Array[index]);
 
         #region Common
